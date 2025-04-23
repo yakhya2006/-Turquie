@@ -1,24 +1,88 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #000;
+    background: linear-gradient(to bottom, #f0f0f0, #e5e5e5);
+    color: #111;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    animation: fadeIn 2s ease;
 }
 
 header {
     background-color: #e30a17;
     color: white;
-    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    animation: slideDown 1.5s ease-out;
 }
 
-h2 {
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.slide {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 25px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 900px;
+    animation: fadeInUp 1s ease;
+    border-radius: 12px;
+}
+
+.slide h2 {
     color: #e30a17;
+    margin-bottom: 10px;
+}
+
+.slide p {
+    line-height: 1.8;
+    margin: 10px 0;
 }
 
 img {
-    width: 100%;
+    width: 80%;
+    display: block;
+    margin: 20px auto;
+    animation: zoomIn 2s ease;
+    border-radius: 10px;
 }
 
 footer {
     text-align: center;
-    color: #555;
+    background-color: #ddd;
+    color: #333;
+    font-size: 0.9em;
+    padding: 20px;
+    margin-top: 50px;
+    animation: fadeIn 3s ease;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
